@@ -1,0 +1,164 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  /* positioned */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  /* 400, 700 */
+
+  /* box model */
+  min-height: 100vh;
+
+  /* visual */
+  background-color: var(--Dark-cyan);
+  background-image: url("./../images/bg-pattern-top.svg"),
+    url("./../images/bg-pattern-bottom.svg");
+
+  background-position-x: -50vw, 50vw;
+  background-position-y: -50vh, 50vh;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.attribution {
+  /* pos */
+  position: absolute;
+  bottom: 20px;
+
+  /* typogra, fonts */
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  /* pos */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* box model */
+  max-width: 375px;
+  border: none;
+  border-radius: 20px;
+  width: 90%;
+
+  /* visual */
+  background-color: white;
+}
+
+.card__upper-image {
+  /* pos */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* box model */
+  min-height: 40%;
+  min-width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  /* visual */
+  background-image: url("./../images/bg-pattern-card.svg");
+  background-repeat: repeat-x;
+}
+
+.card__image-container {
+  /* pos */
+  z-index: 1;
+
+  /* box model */
+  margin-top: 5rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.card__image {
+  /* box model */
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card__name {
+  /* pos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* box model */
+  margin: 10px auto;
+  gap: 10px;
+
+  /* typo, fonts */
+  color: var(--Very-dark-desaturated-blue);
+  text-align: center;
+  font-weight: 700;
+}
+
+.card__age {
+  /* typo, fonts */
+  color: var(--Dark-grayish-blue);
+}
+
+.card__place {
+  /* box model */
+  margin-top: 0;
+
+  /* typo, fonts */
+  color: var(--Dark-grayish-blue);
+  text-transform: capitalize;
+}
+
+.card__data {
+  /* pos */
+  display: flex;
+  justify-content: space-evenly;
+
+  /* box model */
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid var(--Dark-gray);
+}
+
+.data__item-number {
+  /* pos */
+  text-align: center;
+
+  /* box model */
+  margin-bottom: 2px;
+
+  /* typo, fonts */
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+  font-size: 1.5rem;
+}
+
+.data__item-data {
+  /* box model */
+  margin-top: 2px;
+  /* typo, fonts */
+  text-align: center;
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+}
